@@ -16,6 +16,7 @@
   --card-border-color: #eeeeee;
   --footer-bgd-color: #2f303a;
   --border-color: #ececec;
+  --team-icon-color: #afb1b8;
 }
 
 body {
@@ -170,15 +171,15 @@ img {
   color: var(--primary-logo-color);
 }
 
-.navi-icon {
+.navi-link > .navi-icon {
   margin-right: 10px;
 }
 
-.navi-icon {
+.navi-link > .navi-icon {
   fill: currentColor;
 }
 
-.navi-icon:hover {
+.navi-link > .navi-icon:hover {
   fill: var(--primary-logo-color);
 }
 
@@ -263,6 +264,11 @@ img {
   line-height: calc(24 / 14);
 }
 
+.features-item > .thumb {
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}
+
 /* Чим ми займаємося */
 .activities {
   padding-top: 0;
@@ -296,7 +302,8 @@ img {
 }
 
 .team-desc {
-  padding: 30px 0;
+  padding-top: 30px;
+  padding-bottom: 16px;
 }
 
 .team-name {
@@ -313,6 +320,38 @@ img {
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
+}
+
+.team-social-links {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.thumb > .team-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  outline: 1px solid var(--main-bgd-color);
+  border-radius: 50%;
+}
+
+.thumb > .team-link:hover {
+  background-color: var(--primary-logo-color);
+}
+
+.team-social-links > .thumb:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-icon {
+  fill: var(--team-icon-color);
+}
+
+.team-icon:hover {
+  fill: var(--main-bgd-color);
 }
 
 /* Стилі підвалу */
