@@ -17,6 +17,7 @@
   --footer-bgd-color: #2f303a;
   --border-color: #ececec;
   --team-icon-color: #afb1b8;
+  --social-links-footer-color: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -293,7 +294,7 @@ img {
 
 .team-list > .team-item {
   background-color: var(--main-bgd-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -334,12 +335,15 @@ img {
   align-items: center;
   width: 44px;
   height: 44px;
+  color: var(--team-icon-color);
   outline: 1px solid var(--main-bgd-color);
   border-radius: 50%;
 }
 
-.thumb > .team-link:hover {
+.thumb > .team-link:hover,
+.thumb > .team-link:focus {
   background-color: var(--primary-logo-color);
+  color: var(--main-bgd-color);
 }
 
 .team-social-links > .thumb:not(:last-child) {
@@ -347,14 +351,52 @@ img {
 }
 
 .team-icon {
-  fill: var(--team-icon-color);
+  fill: currentColor;
 }
 
-.team-icon:hover {
-  fill: var(--main-bgd-color);
+/* Постійні клієнти */
+.clients-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients-item > .clients-link {
+  display: block;
+
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+
+  color: var(--team-icon-color);
+  border-radius: 4px;
+  border: 1px solid var(--team-icon-color);
+}
+
+.clients-item > .clients-link:hover,
+.clients-item > .clients-link:focus {
+  border-color: var(--primary-logo-color);
+  color: var(--primary-logo-color);
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.client-icon {
+  fill: currentColor;
 }
 
 /* Стилі підвалу */
+.footer > .container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-info {
+  margin-right: 70px;
+}
+
 .footer {
   padding: 60px 0;
 
@@ -400,6 +442,40 @@ img {
   color: var(--primary-logo-color);
 }
 
+.join-us-title {
+  margin-bottom: 20px;
+  color: var(--main-bgd-color);
+}
+
+.join-us-links {
+  display: flex;
+  justify-content: center;
+}
+
+.thumb > .social-link-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--social-links-footer-color);
+  border-radius: 50%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.thumb > .social-link-footer:hover,
+.thumb > .social-link-footer:focus {
+  background-color: var(--primary-logo-color);
+}
+
+.join-us-links > .thumb:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-icon {
+  fill: var(--main-bgd-color);
+}
+
 /* ---------Портфоліо---------- */
 /* btn-secondary */
 .filter-items {
@@ -431,6 +507,7 @@ img {
 .btn-secondary:focus {
   color: var(--main-bgd-color);
   background-color: var(--primary-logo-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .cards {
@@ -441,6 +518,11 @@ img {
 .card {
   margin-right: 30px;
   margin-bottom: 30px;
+}
+
+.card:hover,
+.card:focus {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .cards > .card:nth-child(3n) {
