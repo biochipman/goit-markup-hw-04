@@ -196,7 +196,6 @@ img {
   max-width: 1600px;
   height: 600px;
   margin: 0 auto;
-  outline: 1px solid #000000;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 }
 
@@ -266,8 +265,15 @@ img {
 }
 
 .features-item > .thumb {
-  padding: 25px 100px;
+  display: flex;
+  width: 270px;
+  height: 120px;
   margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--btn-secondary-color);
+  border-radius: 4px;
 }
 
 /* Чим ми займаємося */
@@ -335,8 +341,8 @@ img {
   align-items: center;
   width: 44px;
   height: 44px;
+
   color: var(--team-icon-color);
-  outline: 1px solid var(--main-bgd-color);
   border-radius: 50%;
 }
 
@@ -362,11 +368,12 @@ img {
 }
 
 .clients-item > .clients-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 170px;
   height: 92px;
-  padding: 16px 32px;
 
   color: var(--team-icon-color);
   border-radius: 4px;
@@ -445,6 +452,8 @@ img {
 .join-us-title {
   margin-bottom: 20px;
   color: var(--main-bgd-color);
+  font-weight: 700;
+  line-height: calc(16 / 14);
 }
 
 .join-us-links {
@@ -520,9 +529,19 @@ img {
   margin-bottom: 30px;
 }
 
-.card:hover,
-.card:focus {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.card-link {
+  display: block;
+  text-decoration: none;
+}
+
+.card-link:link,
+.card-link:visited {
+  color: var(--main-font-color);
+}
+
+.card-link:hover,
+.card-link:focus {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .cards > .card:nth-child(3n) {
